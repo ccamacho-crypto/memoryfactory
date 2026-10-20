@@ -30,3 +30,8 @@ This is a **static, responsive, original-design-inspired** reconstruction of the
 - Review Formspree privacy and spam settings.
 
 Archive: https://web.archive.org/web/20240723085103/https://memoryfactory.com/
+
+
+## Archived image support
+
+Image slots are now wired into the homepage, service cards, events, and partner section. See `assets/archive/README.md` for filenames. The original image files were not retrievable in this environment; add verified originals when available.
