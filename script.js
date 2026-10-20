@@ -7,14 +7,14 @@ const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const endpoint = window.MEMORY_FACTORY_CONFIG?.formspreeEndpoint?.trim();
-  if (!endpoint || !/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint)) { status.textContent = 'Contact form is not connected yet. Please call 305.668.1801 to reach us.'; status.className = 'form-status error'; return; }
+  const endpoint = window.MEMORY_FACTORY_CONFIG?.formspreeEndpoint?.trim() || 'https://formspree.io/f/mqpevlgo';
+  if (!endpoint || !/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint)) { status.textContent = 'The contact form is temporarily unavailable. Please try again later.'; status.className = 'form-status error'; return; }
   const button = form.querySelector('button[type="submit"]'); button.disabled = true; button.textContent = 'Sending…'; status.textContent = '';
   try {
     const response = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
     if (!response.ok) throw new Error('Submission failed');
-    form.reset(); status.textContent = 'Thanks! Your message was sent successfully.'; status.className = 'form-status success';
-  } catch (error) { status.textContent = 'We could not send your message. Please try again or call us.'; status.className = 'form-status error'; }
+    form.reset(); status.textContent = 'Thank you! Your message has been sent successfully.'; status.className = 'form-status success';
+  } catch (error) { status.textContent = 'Your message could not be sent. Please try again.'; status.className = 'form-status error'; }
   finally { button.disabled = false; button.textContent = 'Send Message ↗'; }
 });
 
