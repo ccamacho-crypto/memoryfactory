@@ -14,7 +14,7 @@ Edit `config.js`, setting `formspreeEndpoint` to your Formspree form URL (for ex
 The supplied `jonbin.zip` is a WordPress theme package; its stock demo photography is **not included**. The six gallery tiles are deliberately labeled placeholders, rather than falsely representing stock photos as Memory Factory work. To add photographs, put them in `assets/` and add a `style="background-image:url('assets/your-photo.jpg')" data-image` to the matching `.portfolio-tile` anchor in `index.html`. Other backgrounds can be replaced through `styles.css`.
 
 ## Content
-The existing Memory Factory services, 2024 archived pricing, reviews, business information, and form are retained. Verify historical business details and pricing before publishing.
+The existing Memory Factory services, service pricing, reviews, business information, and form are retained. Verify business details and pricing before publishing.
 
 ## Design notes
 This is an approximation of the supplied template's layout, spacing, grayscale photographic palette, portfolio grid and dark pricing section. It is not a WordPress theme installation or a pixel-perfect replica; theme fonts and proprietary demo assets have not been embedded.
@@ -29,7 +29,7 @@ The supplied `MF WEBSITE ASSETS.zip` was integrated locally (no external image h
 - Six event photographs: `assets/event-01.jpg` through `event-06.jpg`
 - Six community partner logos: `assets/partner-*.png`
 
-All image references are relative and work on GitHub Pages subpaths. Replace photos by keeping the same filenames. The archived 2024 pricing and configurable Formspree contact form are retained. Verify archived business details before publishing.
+All image references are relative and work on GitHub Pages subpaths. Replace photos by keeping the same filenames. The service pricing and configurable Formspree contact form are retained. Verify business details before publishing.
 
 ## Homepage parallax background
 The first section uses `assets/header-background.jpg` (supplied by you). The background moves more slowly than page content on scroll, with a dark readability overlay. Visitors who prefer reduced motion see a static background.
@@ -48,3 +48,10 @@ Footer update: Replaced the stylized text footer branding with the original Memo
 
 ## Image overlays update
 Removed dark/shadow gradients from the hero, portfolio photographs and contact background. The requested white hero outline and the light contact form remain for usability. The parallax effects and contact-background blur are retained.
+
+
+## Latest change
+Removed the four individual transfer-service pricing links and added one centered white SEE PRICING button with a thin rounded outline below the service cards. It links to the existing pricing section.
+
+## Header update
+The logo and contact information now use separate responsive columns, with narrower logo sizing on desktops and stacked contact details on small screens.
