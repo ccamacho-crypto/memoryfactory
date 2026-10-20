@@ -30,3 +30,15 @@ The supplied `MF WEBSITE ASSETS.zip` was integrated locally (no external image h
 - Six community partner logos: `assets/partner-*.png`
 
 All image references are relative and work on GitHub Pages subpaths. Replace photos by keeping the same filenames. The archived 2024 pricing and configurable Formspree contact form are retained. Verify archived business details before publishing.
+
+## Homepage parallax background
+The first section uses `assets/header-background.jpg` (supplied by you). The background moves more slowly than page content on scroll, with a dark readability overlay. Visitors who prefer reduced motion see a static background.
+
+## Hero text layout update
+The first section uses a left-aligned column with a thin white rectangular border around the headline, introduction, buttons, and tagline. The original background image and parallax remain intact. Change `.hero-copy-frame` in `styles.css` to adjust the border or padding.
+
+## Typography
+All website text uses Montserrat via Google Fonts (weights 300–900). An internet connection is needed to load the webfont; Arial is the fallback.
+
+## Contact background update
+The contact section uses `assets/contact-background.jpg` (the user-supplied VHS image), with a 5px blur, dark overlay and JavaScript parallax. Reduced-motion preferences disable the movement.

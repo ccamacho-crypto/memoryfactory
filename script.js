@@ -17,3 +17,39 @@ form.addEventListener('submit', async (event) => {
   } catch (error) { status.textContent = 'We could not send your message. Please try again or call us.'; status.className = 'form-status error'; }
   finally { button.disabled = false; button.textContent = 'Send Message ↗'; }
 });
+
+// Lightweight parallax effect; respects reduced-motion preferences.
+(() => {
+  const hero = document.querySelector('.hero');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let pending = false;
+  function update() {
+    const rect = hero.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < innerHeight) {
+      const offset = Math.max(-90, Math.min(90, -rect.top * 0.22));
+      hero.style.setProperty('--hero-parallax', `${offset}px`);
+    }
+    pending = false;
+  }
+  window.addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(update); } }, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
+})();
+
+// Contact background parallax, disabled when reduced motion is preferred.
+(() => {
+ const section=document.querySelector('.contact');
+ if(!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ let scheduled=false;
+ const update=()=>{
+  const rect=section.getBoundingClientRect();
+  if(rect.bottom>0 && rect.top<innerHeight){
+   const centerDelta=(innerHeight/2)-(rect.top+rect.height/2);
+   section.style.setProperty('--contact-parallax', `${Math.max(-65,Math.min(65,centerDelta*.13))}px`);
+  }
+  scheduled=false;
+ };
+ window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});
+ window.addEventListener('resize',update,{passive:true});
+ update();
+})();
