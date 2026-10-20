@@ -53,3 +53,13 @@ form.addEventListener('submit', async (event) => {
  window.addEventListener('resize',update,{passive:true});
  update();
 })();
+
+// Compact floating header while scrolling; no layout overlap.
+(() => {
+ const header=document.querySelector('.site-header');
+ if(!header)return;
+ let queued=false;
+ const update=()=>{header.classList.toggle('is-scrolled',window.scrollY>110);queued=false};
+ window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update)}},{passive:true});
+ update();
+})();
