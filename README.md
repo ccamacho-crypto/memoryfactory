@@ -67,3 +67,6 @@ Latest update: compact floating header on scroll, Event Services photo gallery w
 
 ## Header social media links
 The top header contains linked Facebook, Instagram, and YouTube icons, opening in a new tab. URLs are editable in `index.html`.
+
+### Contact form cache fix
+The form action is set directly to https://formspree.io/f/mqpevlgo and JavaScript assets use versioned URLs to avoid stale browser caches. Success is shown only on successful Formspree responses. If the old “not connected yet” text still appears, the live hosting deployment is serving an older copy.

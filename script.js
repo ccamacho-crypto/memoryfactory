@@ -7,7 +7,7 @@ const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const endpoint = window.MEMORY_FACTORY_CONFIG?.formspreeEndpoint?.trim() || 'https://formspree.io/f/mqpevlgo';
+  const endpoint = form.getAttribute('action') || 'https://formspree.io/f/mqpevlgo';
   if (!endpoint || !/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint)) { status.textContent = 'The contact form is temporarily unavailable. Please try again later.'; status.className = 'form-status error'; return; }
   const button = form.querySelector('button[type="submit"]'); button.disabled = true; button.textContent = 'Sending…'; status.textContent = '';
   try {
