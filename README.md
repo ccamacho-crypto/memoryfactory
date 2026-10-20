@@ -55,3 +55,10 @@ Removed the four individual transfer-service pricing links and added one centere
 
 ## Header update
 The logo and contact information now use separate responsive columns, with narrower logo sizing on desktops and stacked contact details on small screens.
+
+## Services copy update
+The services introduction and all four transfer-service descriptions were replaced with the owner-provided wording. The single SEE PRICING button is retained.
+
+
+## Contact map
+The contact section displays a Google Maps embed for Memory Factory in Falls Warehouse District to the left of the Formspree form. The embed URL is in `index.html` under `.contact-map`; replace the `src` to change the location. The map requires an internet connection and visitor permission to load Google Maps.
