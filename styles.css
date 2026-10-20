@@ -158,3 +158,19 @@ section[id]{scroll-margin-top:145px}
 @media(max-width:850px){.site-header.is-scrolled .header-main{display:flex;flex-direction:row;gap:12px;min-height:64px;align-items:center}.site-header.is-scrolled .header-logo{width:135px;max-width:135px;flex:0 0 135px}.site-header.is-scrolled .header-logo img{max-height:56px}.site-header.is-scrolled .header-info{display:flex;flex:1;min-width:0;justify-content:flex-end}.site-header.is-scrolled .info-item{border:0;min-width:0}.site-header.is-scrolled .info-item:first-child,.site-header.is-scrolled .info-item:last-child{display:none}}
 @media(max-width:600px){.site-header.is-scrolled .header-main{padding-top:6px;padding-bottom:6px}.site-header.is-scrolled .header-logo{width:110px;max-width:110px;flex-basis:110px}.site-header.is-scrolled .info-item{padding:0}.site-header.is-scrolled .info-item svg{display:none}.site-header.is-scrolled .info-item small{font-size:11px}.site-header.is-scrolled .header-nav-wrap .nav{min-height:44px}}
 @media(prefers-reduced-motion:reduce){.site-header,.site-header *{transition:none!important}}
+
+/* Linked social icons in the header */
+.social-links{gap:18px;font-family:inherit;font-weight:normal}
+.social-links a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:#353132;text-decoration:none;transition:color .2s ease,transform .2s ease}
+.social-links a:hover,.social-links a:focus-visible{color:#c52e32;transform:translateY(-1px)}
+.social-links a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:3px}
+.social-links svg{width:20px;height:20px;display:block}
+
+/* Reliable floating header: fixed to viewport, independent of ancestor sticky constraints. */
+.site-header{position:fixed!important;top:0!important;left:0;right:0;width:100%;z-index:9999!important;transform:none!important}
+.site-header.is-scrolled .header-main{height:auto!important;min-height:72px!important}
+.site-header.is-scrolled .header-logo{flex-basis:175px!important;width:175px!important;max-width:175px!important}
+.site-header.is-scrolled .header-logo img{width:100%!important;max-height:65px!important;object-fit:contain}
+.site-header.is-scrolled .header-nav-wrap .nav{min-height:48px!important}
+@media(max-width:850px){.site-header.is-scrolled .header-logo{flex:0 0 135px!important;width:135px!important;max-width:135px!important}}
+@media(max-width:600px){.site-header.is-scrolled .header-logo{flex:0 0 110px!important;width:110px!important;max-width:110px!important}}

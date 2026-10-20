@@ -63,3 +63,22 @@ form.addEventListener('submit', async (event) => {
  window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update)}},{passive:true});
  update();
 })();
+
+// Reserve the header's original document space while the fixed header floats.
+(() => {
+ const header=document.querySelector('.site-header');
+ if(!header)return;
+ const spacer=document.createElement('div');
+ spacer.className='fixed-header-spacer';
+ spacer.setAttribute('aria-hidden','true');
+ header.insertAdjacentElement('afterend',spacer);
+ const measure=()=>{
+  const compact=header.classList.contains('is-scrolled');
+  header.classList.remove('is-scrolled');
+  spacer.style.height=header.getBoundingClientRect().height+'px';
+  if(compact)header.classList.add('is-scrolled');
+ };
+ measure();
+ window.addEventListener('load',measure,{once:true});
+ window.addEventListener('resize',measure,{passive:true});
+})();

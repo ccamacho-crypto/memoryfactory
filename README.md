@@ -64,3 +64,6 @@ The services introduction and all four transfer-service descriptions were replac
 The contact section displays a Google Maps embed for Memory Factory in Falls Warehouse District to the left of the Formspree form. The embed URL is in `index.html` under `.contact-map`; replace the `src` to change the location. The map requires an internet connection and visitor permission to load Google Maps.
 
 Latest update: compact floating header on scroll, Event Services photo gallery with no captions, removed separate event-services panel, Falls Warehouse District map heading, medium-bold headings.
+
+## Header social media links
+The top header contains linked Facebook, Instagram, and YouTube icons, opening in a new tab. URLs are editable in `index.html`.
