@@ -1,37 +1,20 @@
-# Memory Factory — archive-inspired GitHub Pages rebuild
+# Memory Factory — Jon Bin-inspired GitHub Pages rebuild
 
-This is a **static, responsive, original-design-inspired** reconstruction of the Memory Factory website captured July 23, 2024. It preserves the archived page's main section order, "Live. Record. Play." headline, service descriptions, 2024 pricing, testimonials and contact details. The header is reconstructed from a user-provided screenshot, including a recreated vector logo; this is an approximation rather than the original logo asset. Other original photography and exact stylesheets were not recovered. The illustrative film graphic is CSS-based.
+This is a **static HTML/CSS/JavaScript adaptation** of the existing Memory Factory rebuild, styled using the supplied Jon Bin template screenshot as a visual reference. It does not require WordPress, PHP, plugins or a database.
 
-## Files
-- `index.html`: page content and archived pricing
-- `styles.css`: layout and styling
-- `script.js`: mobile navigation and Formspree submission
-- `config.js`: configurable Formspree endpoint
-- `assets/favicon.svg`: placeholder logo icon
-- `assets/memory-factory-logo.svg`: recreated header logo based on the provided screenshot
+## Publish
+1. Extract the ZIP and upload its **contents** (not the enclosing directory) to a GitHub repository.
+2. Go to Settings → Pages → Deploy from a branch → `main` → `/(root)` → Save.
+3. Wait for GitHub Pages to publish the site.
 
-## Deploy to GitHub Pages
-1. Create a public GitHub repository, for example `memory-factory`.
-2. Upload **all files and the assets folder** to the repository root (not a nested folder).
-3. In repository **Settings → Pages**, select **Deploy from a branch** and set **main / (root)**. Save.
-4. Open the published URL, usually `https://YOUR_USERNAME.github.io/memory-factory/`.
-5. Test navigation and form on desktop and mobile. Relative asset paths support project-site hosting.
+## Contact form
+Edit `config.js`, setting `formspreeEndpoint` to your Formspree form URL (for example `https://formspree.io/f/YOUR_ID`). Deploy and submit a test message. There is no `_gotcha` field.
 
-## Formspree
-1. Create a form at https://formspree.io/ and verify your receiving email address.
-2. Edit `config.js` to set `formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID"`.
-3. Commit changes and submit a test message from the deployed website. Check spam and your Formspree dashboard if delivery fails.
-4. No `_gotcha` input is included.
+## Images
+The supplied `jonbin.zip` is a WordPress theme package; its stock demo photography is **not included**. The six gallery tiles are deliberately labeled placeholders, rather than falsely representing stock photos as Memory Factory work. To add photographs, put them in `assets/` and add a `style="background-image:url('assets/your-photo.jpg')" data-image` to the matching `.portfolio-tile` anchor in `index.html`. Other backgrounds can be replaced through `styles.css`.
 
-## Before publishing
-- **All listed prices are from July 2024, not verified current rates.** The site labels them accordingly.
-- Confirm the archived telephone, address and hours before accepting customers. They are included for archival fidelity.
-- Replace placeholder branding and illustrative artwork with original licensed assets if available.
-- Review Formspree privacy and spam settings.
+## Content
+The existing Memory Factory services, 2024 archived pricing, reviews, business information, and form are retained. Verify historical business details and pricing before publishing.
 
-Archive: https://web.archive.org/web/20240723085103/https://memoryfactory.com/
-
-
-## Archived image support
-
-Image slots are now wired into the homepage, service cards, events, and partner section. See `assets/archive/README.md` for filenames. The original image files were not retrievable in this environment; add verified originals when available.
+## Design notes
+This is an approximation of the supplied template's layout, spacing, grayscale photographic palette, portfolio grid and dark pricing section. It is not a WordPress theme installation or a pixel-perfect replica; theme fonts and proprietary demo assets have not been embedded.
