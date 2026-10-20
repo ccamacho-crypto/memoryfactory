@@ -18,3 +18,15 @@ The existing Memory Factory services, 2024 archived pricing, reviews, business i
 
 ## Design notes
 This is an approximation of the supplied template's layout, spacing, grayscale photographic palette, portfolio grid and dark pricing section. It is not a WordPress theme installation or a pixel-perfect replica; theme fonts and proprietary demo assets have not been embedded.
+
+
+## Original image assets added
+The supplied `MF WEBSITE ASSETS.zip` was integrated locally (no external image hotlinks):
+- Header background: `assets/header-background.jpg`
+- Contact background: `assets/contact-background.jpg`
+- Original logo and favicon: `assets/memory-factory-original-logo.png`, `assets/favicon.png`
+- Transfer-service icons: `assets/*-icon.png`
+- Six event photographs: `assets/event-01.jpg` through `event-06.jpg`
+- Six community partner logos: `assets/partner-*.png`
+
+All image references are relative and work on GitHub Pages subpaths. Replace photos by keeping the same filenames. The archived 2024 pricing and configurable Formspree contact form are retained. Verify archived business details before publishing.
