@@ -84,3 +84,15 @@ html, body, button, input, textarea, select, option { font-family: 'Montserrat',
 .contact-form{color:#252525;background:rgba(255,255,255,.96)}
 .contact-form h3,.contact-form label{color:#252525}
 @media(prefers-reduced-motion:reduce){.contact::before{transform:scale(1.035)!important;will-change:auto}}
+
+/* Original Memory Factory logo in footer */
+.footer-logo{display:inline-flex;align-items:center;max-width:240px;background:#fff;padding:12px 16px;text-decoration:none}
+.footer-logo img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:680px){.footer-logo{max-width:210px}}
+
+/* Remove darkened/shadowed layers placed over photography. */
+.hero::after, .contact::after, .portfolio-tile::after, .portfolio-tile::before, .hero-art::after { display:none !important; content:none !important; }
+.hero .hero-copy-frame { background:transparent !important; box-shadow:none !important; backdrop-filter:none !important; }
+.portfolio-tile, .portfolio-tile span { box-shadow:none !important; text-shadow:none !important; }
+.hero-art { box-shadow:none !important; }
+.contact-form { box-shadow:none !important; }

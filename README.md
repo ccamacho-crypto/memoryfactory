@@ -42,3 +42,9 @@ All website text uses Montserrat via Google Fonts (weights 300–900). An intern
 
 ## Contact background update
 The contact section uses `assets/contact-background.jpg` (the user-supplied VHS image), with a 5px blur, dark overlay and JavaScript parallax. Reduced-motion preferences disable the movement.
+
+
+Footer update: Replaced the stylized text footer branding with the original Memory Factory logo (`assets/memory-factory-original-logo.png`).
+
+## Image overlays update
+Removed dark/shadow gradients from the hero, portfolio photographs and contact background. The requested white hero outline and the light contact form remain for usability. The parallax effects and contact-background blur are retained.
