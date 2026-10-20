@@ -1,44 +1,31 @@
-# Memory Factory — GitHub Pages website
+# Memory Factory — archive-inspired GitHub Pages rebuild
 
-Modernized, responsive, static rebuild based on the July 23, 2024 Wayback Machine snapshot of memoryfactory.com.
-
-## Quick start
-
-1. Unzip the project.
-2. Edit `config.js` and enter your Formspree endpoint in `formspreeEndpoint` (example: `https://formspree.io/f/abcdefgh`). Leave blank until you have a form. **Do not include a honeypot `_gotcha` input**; this project does not use one.
-3. Review the archived 2024 prices, business address, phone number, and hours in `index.html`. Confirm details before launch.
-4. Upload `index.html`, `styles.css`, `script.js`, `config.js`, `assets/`, and optionally this README to the **root** of a GitHub repository.
-5. In GitHub, open **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select **main** and **/(root)**, then save.
-6. Visit the Pages URL shown by GitHub after deployment. A repository named `USERNAME.github.io` publishes at `https://USERNAME.github.io/`; a normal project repository publishes at `https://USERNAME.github.io/REPOSITORY/`.
-
-## Formspree setup
-
-- Create or sign in at https://formspree.io/ and create a form.
-- Copy its `https://formspree.io/f/...` endpoint into `config.js`.
-- Verify the recipient email in Formspree and check spam/filtering if you don't receive messages.
-- Submit a test inquiry on the deployed site. The form uses `fetch` with JSON response handling and has no `_gotcha` field.
-- If the endpoint is empty or invalid, the form displays a not-connected notice rather than pretending to send.
+This is a **static, responsive, original-design-inspired** reconstruction of the Memory Factory website captured July 23, 2024. It preserves the archived page's main section order, "Live. Record. Play." headline, service descriptions, 2024 pricing, testimonials and contact details. The archived source's precise CSS, original logo and photographs were not recovered, so the result is an approximation, not a pixel-perfect clone. The illustrative film graphic is CSS-based.
 
 ## Files
+- `index.html`: page content and archived pricing
+- `styles.css`: layout and styling
+- `script.js`: mobile navigation and Formspree submission
+- `config.js`: configurable Formspree endpoint
+- `assets/favicon.svg`: placeholder logo icon
 
-- `index.html`: all site content and structure
-- `styles.css`: responsive design and typography
-- `script.js`: mobile menu and Formspree form submission
-- `config.js`: editable Formspree endpoint
-- `assets/favicon.svg`: original-style typographic placeholder favicon (newly designed, not an archived asset)
+## Deploy to GitHub Pages
+1. Create a public GitHub repository, for example `memory-factory`.
+2. Upload **all files and the assets folder** to the repository root (not a nested folder).
+3. In repository **Settings → Pages**, select **Deploy from a branch** and set **main / (root)**. Save.
+4. Open the published URL, usually `https://YOUR_USERNAME.github.io/memory-factory/`.
+5. Test navigation and form on desktop and mobile. Relative asset paths support project-site hosting.
 
-## Content provenance and limitations
+## Formspree
+1. Create a form at https://formspree.io/ and verify your receiving email address.
+2. Edit `config.js` to set `formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID"`.
+3. Commit changes and submit a test message from the deployed website. Check spam and your Formspree dashboard if delivery fails.
+4. No `_gotcha` input is included.
 
-Reference: https://web.archive.org/web/20240723085103/https://memoryfactory.com/
+## Before publishing
+- **All listed prices are from July 2024, not verified current rates.** The site labels them accordingly.
+- Confirm the archived telephone, address and hours before accepting customers. They are included for archival fidelity.
+- Replace placeholder branding and illustrative artwork with original licensed assets if available.
+- Review Formspree privacy and spam settings.
 
-The archived website's copy, categories, published pricing, testimonials, business phone, location, and hours informed this rebuild. The visual design is **new and inspired by the brand**, not a pixel-identical reconstruction. Original photo assets, original logo, and original fonts were not recoverable in this environment. The hero artwork and logo are CSS/vector placeholders. Replace them with your owned original brand assets if available.
-
-2024 prices are intentionally preserved and clearly labeled as historical. Some testimonials are excerpted. The archive listed 12900 SW 89 Ct, Miami, FL 33176 and 305.668.1801; verify these before publication. This is a frontend-only website: GitHub Pages cannot run server-side form handlers.
-
-## Custom domain (optional)
-
-In **Settings → Pages → Custom domain**, enter your domain and follow GitHub's DNS instructions. For `www`, typically configure a CNAME pointing to `USERNAME.github.io`; for apex domains follow GitHub's published A/AAAA record guidance. Enable HTTPS once available. Do not point your domain until you are ready to launch.
-
-## Local preview
-
-Open `index.html` directly, or run `python3 -m http.server 8000` from this folder and visit http://localhost:8000/.
+Archive: https://web.archive.org/web/20240723085103/https://memoryfactory.com/
