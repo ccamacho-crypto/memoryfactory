@@ -174,3 +174,19 @@ section[id]{scroll-margin-top:145px}
 .site-header.is-scrolled .header-nav-wrap .nav{min-height:48px!important}
 @media(max-width:850px){.site-header.is-scrolled .header-logo{flex:0 0 135px!important;width:135px!important;max-width:135px!important}}
 @media(max-width:600px){.site-header.is-scrolled .header-logo{flex:0 0 110px!important;width:110px!important;max-width:110px!important}}
+
+/* Scrolled-only hamburger immediately to the right of store hours */
+.header-main{position:relative}
+.scroll-menu{display:none;position:relative;flex:0 0 auto}
+.site-header.is-scrolled .scroll-menu{display:flex;align-items:center;justify-content:flex-end}
+.site-header.is-scrolled .header-main{grid-template-columns:minmax(110px,175px) minmax(0,1fr) 44px;gap:clamp(10px,2vw,24px)}
+.site-header.is-scrolled .header-nav-wrap{display:none!important}
+.scroll-menu-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:transparent;border:1px solid #ddd;border-radius:5px;cursor:pointer;padding:8px}
+.scroll-menu-toggle span{display:block;width:22px;height:2px;background:#262626;border-radius:2px}
+.scroll-menu-toggle:focus-visible{outline:2px solid #333;outline-offset:3px}
+.scroll-nav{display:none;position:absolute;right:0;top:calc(100% + 10px);width:220px;background:#fff;border:1px solid #e5e5e5;box-shadow:0 12px 28px rgba(0,0,0,.15);border-radius:5px;padding:8px 0;z-index:10001}
+.scroll-nav.open{display:flex;flex-direction:column}
+.scroll-nav a{display:block;padding:12px 18px;color:#262626;text-decoration:none;font-size:13px;font-weight:600}
+.scroll-nav a:hover,.scroll-nav a:focus-visible{background:#f3f3f3}
+@media(max-width:850px){.site-header.is-scrolled .header-main{display:flex;flex-direction:row;gap:10px}.site-header.is-scrolled .header-info{flex:1;justify-content:flex-end}.site-header.is-scrolled .scroll-menu{flex:0 0 44px}}
+@media(max-width:600px){.site-header.is-scrolled .scroll-menu-toggle{width:40px;height:40px}.site-header.is-scrolled .scroll-menu{flex-basis:40px}.scroll-nav{right:0}}

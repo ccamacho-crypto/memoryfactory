@@ -82,3 +82,16 @@ form.addEventListener('submit', async (event) => {
  window.addEventListener('load',measure,{once:true});
  window.addEventListener('resize',measure,{passive:true});
 })();
+
+// Dropdown navigation in the compact floating header.
+(()=>{
+ const button=document.querySelector('.scroll-menu-toggle');
+ const menu=document.querySelector('#scroll-nav');
+ if(!button||!menu)return;
+ const close=()=>{menu.classList.remove('open');button.setAttribute('aria-expanded','false')};
+ button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';menu.classList.toggle('open',open);button.setAttribute('aria-expanded',String(open))});
+ menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',close));
+ document.addEventListener('click',event=>{if(!button.contains(event.target)&&!menu.contains(event.target))close()});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+ window.addEventListener('scroll',()=>{if(!document.querySelector('.site-header')?.classList.contains('is-scrolled'))close()},{passive:true});
+})();
