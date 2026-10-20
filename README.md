@@ -1,6 +1,6 @@
 # Memory Factory — archive-inspired GitHub Pages rebuild
 
-This is a **static, responsive, original-design-inspired** reconstruction of the Memory Factory website captured July 23, 2024. It preserves the archived page's main section order, "Live. Record. Play." headline, service descriptions, 2024 pricing, testimonials and contact details. The archived source's precise CSS, original logo and photographs were not recovered, so the result is an approximation, not a pixel-perfect clone. The illustrative film graphic is CSS-based.
+This is a **static, responsive, original-design-inspired** reconstruction of the Memory Factory website captured July 23, 2024. It preserves the archived page's main section order, "Live. Record. Play." headline, service descriptions, 2024 pricing, testimonials and contact details. The header is reconstructed from a user-provided screenshot, including a recreated vector logo; this is an approximation rather than the original logo asset. Other original photography and exact stylesheets were not recovered. The illustrative film graphic is CSS-based.
 
 ## Files
 - `index.html`: page content and archived pricing
@@ -8,6 +8,7 @@ This is a **static, responsive, original-design-inspired** reconstruction of the
 - `script.js`: mobile navigation and Formspree submission
 - `config.js`: configurable Formspree endpoint
 - `assets/favicon.svg`: placeholder logo icon
+- `assets/memory-factory-logo.svg`: recreated header logo based on the provided screenshot
 
 ## Deploy to GitHub Pages
 1. Create a public GitHub repository, for example `memory-factory`.
